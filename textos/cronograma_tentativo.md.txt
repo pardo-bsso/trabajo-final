@@ -32,14 +32,14 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 ### Tarea: 02 - Estudio detallado de la técnica de medición elegida.
 
-- Tiempo estimado: 5 semanas, 6 máximo.
+- Tiempo estimado: 5 semanas.
 
 - Prerequisitos: 01
 
 - Descripción:
 
     Se investigará en detalle la técnica de medición elegida y formas de implementarla,
-    condicionamiento de la señal, ventajas y desventajas de cada una, peculiaridades, etc.
+    acondicionamiento de la señal, ventajas y desventajas de cada una, peculiaridades, etc.
     Se discutirán con el Cliente y se decidirá por una de acuerdo a su factibilidad y las
     condiciones en las que debe operar, no descartándose las restantes por caso de que un
     análisis posterior la vuelva inviable.
@@ -48,14 +48,15 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
     - Semana 2:
 
-        Informe de las posibles formas de implementar la técnica de medición elegida.
+        Informe de las posibles formas de implementar la técnica de medición elegida incluyendo los criterios para la
+        toma de decisiones.
 
     - Semana 3:
 
         Reunión con el Cliente, elección de una forma preferida para implementar el
         acondicionamiento de la señal del sensor.
 
-    - Semana 5 (6):
+    - Semana 5:
 
         Circuito detallado de la etapa de entrada junto con el proceso de análisis para
         arribar al mismo, sensibilidad a la tolerancia de los componentes, consideraciones
@@ -71,8 +72,8 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    Se analizará el horno existente y relevarán sus características con el fin de obtener un
-    patrón de referencia en base al cual construir el horno definitivo.
+    Se analizará el horno existente y relevarán sus características con el fin de obtener una
+    referencia en base a la cual construir el horno definitivo.
 
 - Entregables / Hitos / Etapas:
 
@@ -91,8 +92,9 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    Se relevarán los materiales mas comunes empleados en la construcción de hornos, elementos
-    calefactores, aisladores, etc.
+    Se relevarán los materiales más comunes empleados en la construcción de hornos, elementos
+    calefactores, aisladores, etc. Poniendo énfasis en las técnicas para minimizar interferencias
+    electromagnéticas.
 
     En base a los requerimientos iniciales se calcularán la potencia mínima necesaria, resistencia
     térmica con el ambiente (aislación del horno). Materiales con los cuales lograr estos objetivos.
@@ -101,13 +103,13 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
     - Semana 1:
 
-        Informe sobre métodos constructivos de hornos, considerando materiales de fácil adquisición
+        Informe sobre métodos constructivos de hornos, considerando la disponibilidad demateriales
         en el mercado local.
 
     - Semana 3:
 
-        Informe detallando necesidades mínimas de potencia y aislación. Reunión con el Cliente para
-        discutir estos resultados.
+        Informe detallando el diseño del horno a construir. Reunión con el Cliente para discutir
+        estos resultados.
 
 
 
@@ -115,7 +117,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Prerequisitos: 04, 07
 
-- Tiempo estimado: 2 semanas, 3 máximo.
+- Tiempo estimado: 3 semanas.
 
 - Descripción:
 
@@ -175,7 +177,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 
 
-### Tarea: 08 - Estudio del técnicas de control.
+### Tarea: 08 - Estudio de técnicas de control.
 
 - Prerequisitos: ninguno.
 
@@ -183,8 +185,8 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    Se estudiarán las técnicas mas comunes empleadas para controlar sistemas, prestando atención al efecto
-    introducido por el retardo inherente en el sistema térmico.
+    Se estudiarán técnicas para controlar sistemas, prestando atención al efecto introducido por
+    el retardo inherente en el sistema térmico.
 
 - Entregables / Hitos / Etapas:
 
@@ -199,20 +201,18 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Prerequisitos: 06, 08.
 
-- Tiempo estimado: 3 semanas, 4 máximo.
+- Tiempo estimado: 3 semanas.
 
 - Descripción:
 
     En base a la estrategia de control adoptada en 08 y el modelo analítico del horno desarrollado en 06
-    se procederá diseñar la misma teniendo en cuenta los requerimientos estrictos de cero overshoot y
-    estabilidad del set point a largo plazo, considerando que los procesos de medida pueden fácilmente
-    tomar mas de ocho horas.
+    se procederá diseñar la misma teniendo en cuenta los requerimientos estrictos de rango, exactitud y
+    estabilidad a largo plazo ya descriptos en la introducción, considerando que los procesos de medida
+    pueden fácilmente tomar mas de ocho horas.
 
-    Si bien la primer iteración está fuertemente ligada a los parámetros de horno la solución debe tener
+    Si bien la primer iteración está fuertemente ligada a los parámetros del horno la solución debe tener
     moderada sensibilidad a variaciones en los mismos. En una posterior etapa puede incorporarse identificación
     del horno y ajuste automático de los parámetros de control.
-
-    A DEFINIR: se encara todo el proceso del principio en dominio análogo (plano S) o digital (plano Z)?
 
 - Entregables / Hitos / Etapas:
 
@@ -224,11 +224,6 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
         Estrategia de control completa y validada por simulación, junto con análisis de su variación con el modelo.
         Reunión para discutir resultados.
-
-    - Semana 4:
-
-        Estrategia revisada (de ser necesario).
-        Reunión.
 
 
 
@@ -299,7 +294,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 - Descripción:
 
     Se procederá a construir circuito diseñado en 02 para acondicionar la señal de los sensores. Si bien en esa etapa se
-    procuró no utilizar componentes de difícil adquisición el plazo estimado está sujeto a su disponibilidad o la de
+    procuró utilizar componentes de fácil adquisición el plazo estimado está sujeto a su disponibilidad o la obtención de
     reemplazos de características similares.
 
 - Entregables / Hitos / Etapas:
@@ -323,8 +318,8 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    Se procederá a construir circuito diseñado en 10. Si bien en esa etapa se procuró no utilizar componentes de difícil
-    adquisición el plazo estimado está sujeto a su disponibilidad o la de reemplazos de características similares.
+    Se procederá a construir circuito diseñado en 10. Si bien en esa etapa se procuró utilizar componentes de fácil
+    adquisición el plazo estimado está sujeto a su disponibilidad o la obtención de reemplazos de características similares.
 
 - Entregables / Hitos / Etapas:
 
@@ -381,7 +376,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
     - Semana 2:
 
-        Interfaz de usario funcional, cualquier funcionalidad requerida no implementada (por ejemplo, datos reales de
+        Interfaz de usuario funcional, cualquier funcionalidad requerida no implementada (por ejemplo, datos reales de
         medidas) estará reemplazada por datos ficticios con el fin de permitir su evaluación.
         Reunión con el Cliente para prueba de la misma y devolución de modificaciones a realizar.
 
@@ -403,7 +398,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    Se procederá a la integración de todas las estapas anteriores, realizando los ajustes pertinentes.
+    Se procederá a la integración de todas las etapas anteriores, realizando los ajustes pertinentes.
     Esto comprende la compra o construcción de un gabinete, el armado de cables y demás cosas necesarias a fin de
     armar la unidad final.
 
