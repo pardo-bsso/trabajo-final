@@ -1,0 +1,17 @@
+# Sobre la medida de temperatura:
+
+Para poder medir la temperatura de un objeto es preciso transferir una fracción de su energía térmica al sensor, que
+luego la transforma en una magnitud eléctrica.
+
+Al colocarse un sensor sobre o dentro del objeto estudiado se produce un flujo de calor en la interfaz entre ambos.
+Asimismo, en los métodos de medida sin contacto la energía se transfiere por radiación.
+Esto implica que el proceso perturba la medición.
+
+XXX FIXME: diagrama de resistencias termicas y flujo de calor, por que hay errores en la medicion
+
+## Bibliografía:
+
+* Handbook of modern sensors: Physics, Designs and Applications (3rd edition). Jacob Fraden.
+
+* Heat and Mass Transfer (2nd revised edition). Hans Dieter Baehr, Karl Stephan.
+

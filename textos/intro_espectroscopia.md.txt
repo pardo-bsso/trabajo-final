@@ -1,0 +1,13 @@
+# Espectroscopía de Impedancia
+
+La espectroscopía de impedancia es una técnica relativamente moderna (~1960) para la investigación de las propiedades
+eléctricas de materiales, a partir de las cuales pueden determinarse otras características de los mismos.
+
+En esencia consiste en medir la impedancia de una muestra para un cierto rango de frecuencias de interés, siendo la
+impedancia el cociente complejo entre la tensión de exitación aplicada y la corriente resultante. Para que esto sea
+válido el sistema debe poder considerarse lineal, lo cual implica exitaciones pequeñas. (Las celdas electroquímicas no
+responden en forma lineal para grandes estímulos)
+
+Los datos obtenidos son ajustados a un modelo eléctrico a partir del cual se extraen propiedades de la muestra (por
+ejemplo, detalles de su microestructura).
+A su vez, los resultados dependen de variables tales como la geometría de los electrodos o temperatura.

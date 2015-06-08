@@ -1,0 +1,419 @@
+# Cronograma tentativo
+
+# Descripción de tareas.
+
+Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimado de realización.
+
+### Tarea: 01 - Relevamiento técnicas para medida de temperatura.
+
+- Tiempo estimado: 3 semanas.
+
+- Prerequisitos: ninguno.
+
+- Descripción:
+
+    Se realizará un estudio sobre las técnicas mas comunes utilizadas para medición
+    de temperatura en ámbitos de laboratorio e industriales. En base a este relevamiento
+    se discutirá con el Cliente los posibles métodos a utilizar para decidirse por uno en
+    particular.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe detallando técnicas contemporáneas para medición de temperatura
+        detallando pros y contras de cada una, con sugerencias sobre cuáles usar.
+
+    - Semana 3:
+
+        Reunión con el Cliente al final de la cual se tendrá decidido el método a utilizar.
+
+
+
+### Tarea: 02 - Estudio detallado de la técnica de medición elegida.
+
+- Tiempo estimado: 5 semanas, 6 máximo.
+
+- Prerequisitos: 01
+
+- Descripción:
+
+    Se investigará en detalle la técnica de medición elegida y formas de implementarla,
+    condicionamiento de la señal, ventajas y desventajas de cada una, peculiaridades, etc.
+    Se discutirán con el Cliente y se decidirá por una de acuerdo a su factibilidad y las
+    condiciones en las que debe operar, no descartándose las restantes por caso de que un
+    análisis posterior la vuelva inviable.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe de las posibles formas de implementar la técnica de medición elegida.
+
+    - Semana 3:
+
+        Reunión con el Cliente, elección de una forma preferida para implementar el
+        acondicionamiento de la señal del sensor.
+
+    - Semana 5 (6):
+
+        Circuito detallado de la etapa de entrada junto con el proceso de análisis para
+        arribar al mismo, sensibilidad a la tolerancia de los componentes, consideraciones
+        especiales al momento de construirlo.
+
+
+
+### Tarea: 03 - Estudio del horno existente.
+
+- Tiempo estimado: 1 semana.
+
+- Prerequisitos: ninguno.
+
+- Descripción:
+
+    Se analizará el horno existente y relevarán sus características con el fin de obtener un
+    patrón de referencia en base al cual construir el horno definitivo.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 1:
+
+        Informe detallando temperatura máxima alcanzada, consumo del mismo en ese punto,
+        constante de tiempo.
+
+
+
+### Tarea: 04 - Estudio de métodos constructivos de hornos. Cálculo y diseño.
+
+- Tiempo estimado: 3 semanas.
+
+- Prerequisitos: 03 (débil).
+
+- Descripción:
+
+    Se relevarán los materiales mas comunes empleados en la construcción de hornos, elementos
+    calefactores, aisladores, etc.
+
+    En base a los requerimientos iniciales se calcularán la potencia mínima necesaria, resistencia
+    térmica con el ambiente (aislación del horno). Materiales con los cuales lograr estos objetivos.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 1:
+
+        Informe sobre métodos constructivos de hornos, considerando materiales de fácil adquisición
+        en el mercado local.
+
+    - Semana 3:
+
+        Informe detallando necesidades mínimas de potencia y aislación. Reunión con el Cliente para
+        discutir estos resultados.
+
+
+
+### Tarea: 05 - Construcción del Horno.
+
+- Prerequisitos: 04, 07
+
+- Tiempo estimado: 2 semanas, 3 máximo.
+
+- Descripción:
+
+    En base a los requerimientos obtenidos en 04 se procederá a la construcción del horno.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Horno completamente armado y funcional.
+
+    - Semana 3:
+
+        De ser necesarios, ajustes y correcciones.
+
+
+
+### Tarea: 06 - Análisis e identificación del Horno.
+
+- Prerequisitos: 05
+
+- Tiempo estimado: 2 semanas.
+
+- Descripción:
+
+    Se procederá a modelar el horno construido y obtener los parámetros del mismo a través de
+    diversas medidas. Con el modelo obtenido se ajustará posteriormente el sistema de control.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Modelo analítico del horno ajustado a los parámetros medidos del mismo, descripción de la
+        metodología empleada.
+
+
+
+### Tarea: 07 - Estudio del analizador de impedancia.
+
+- Prerequisitos: ninguno.
+
+- Tiempo estimado: 2 semanas.
+
+- Descripción:
+
+    El analizador de impedancias es un instrumento altamente sensible por lo que debe garantizarse
+    que el horno junto con la electrónica de soporte no comprometan el proceso de medida.
+    Para esto se realizarán diversas pruebas a fin de determinar estrategias apropiadas para minimizar
+    las interferencias generadas y transmitidas.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe detallando situaciones que afectan la medida y formas en las que pueden evitarse o
+        disminuir su influencia.
+
+
+
+### Tarea: 08 - Estudio del técnicas de control.
+
+- Prerequisitos: ninguno.
+
+- Tiempo estimado: 2 semanas máximo.
+
+- Descripción:
+
+    Se estudiarán las técnicas mas comunes empleadas para controlar sistemas, prestando atención al efecto
+    introducido por el retardo inherente en el sistema térmico.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe detallando y comparando las técnicas de control apropiadas para el problema.
+        Reunión para discutir pros y contras de cada una y luego optar por una de ellas.
+
+
+
+### Tarea: 09 - Diseño de solución de control.
+
+- Prerequisitos: 06, 08.
+
+- Tiempo estimado: 3 semanas, 4 máximo.
+
+- Descripción:
+
+    En base a la estrategia de control adoptada en 08 y el modelo analítico del horno desarrollado en 06
+    se procederá diseñar la misma teniendo en cuenta los requerimientos estrictos de cero overshoot y
+    estabilidad del set point a largo plazo, considerando que los procesos de medida pueden fácilmente
+    tomar mas de ocho horas.
+
+    Si bien la primer iteración está fuertemente ligada a los parámetros de horno la solución debe tener
+    moderada sensibilidad a variaciones en los mismos. En una posterior etapa puede incorporarse identificación
+    del horno y ajuste automático de los parámetros de control.
+
+    A DEFINIR: se encara todo el proceso del principio en dominio análogo (plano S) o digital (plano Z)?
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe preliminar de avances.
+
+    - Semana 3:
+
+        Estrategia de control completa y validada por simulación, junto con análisis de su variación con el modelo.
+        Reunión para discutir resultados.
+
+    - Semana 4:
+
+        Estrategia revisada (de ser necesario).
+        Reunión.
+
+
+
+### Tarea: 10 - Diseño de interfaz de potencia.
+
+- Prerequisitos: 04, 07.
+
+- Tiempo estimado: 3 semanas.
+
+- Descripción:
+
+    En base a los requerimientos de potencia para alimentar el horno calculados en 04 y los recaudos a tomar para
+    no interferir en el proceso de medida se procederá a diseñar la parte electrónica encargada de comandarlo.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 1:
+
+        Informe preliminar sobre posibles estrategias.
+        Reunión con el Cliente para discutir resultados y optar por una de ellas.
+
+    - Semana 2:
+
+        Informe preliminar de avances.
+
+    - Semana 3:
+
+        Diseño completo de la etapa de potencia. Esto comprende esquemáticos, lista de materiales, cálculos y
+        justificación de las elecciones, simulaciones y análisis de sensibilidad a tolerancias donde sea pertinente.
+
+
+
+### Tarea: 11 - Implementación unidad de control.
+
+- Prerequisitos: 02, 09.
+
+- Tiempo estimado: 4 semanas.
+
+- Descripción:
+
+    En base a la estrategia de control desarrollada en 09 se procederá a su programación en un microcontrolador
+    estándar. Esta tarea también supone incorporar etapas para acondicionar las señales entregadas por la interfaz
+    de medida diseñada en 02 así como también las requeridas por la etapa de potencia diseñada en 10.
+
+    En este punto la unidad de control no está completamente finalizada, siendo necesario expandirla para incorporar
+    la interfaz de Usuario y atender futuras necesidades no contempladas antes de la integración final.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe preliminar de avances.
+
+    - Semana 4:
+
+        Código fuente completo de la funcionalidad de control, incluyendo librerías de soporte de ser necesarias.
+        Esquemas, lista de materiales y análisis pertinentes de las etapas para comunicarse con las interfaces de medida
+        y potencia (estas podrán ser modificadas en una posterior etapa de integración).
+
+
+
+### Tarea: 12 - Implementación interfaz de medida.
+
+- Prerequisitos: 02.
+
+- Tiempo estimado: 3 semanas.
+
+- Descripción:
+
+    Se procederá a construir circuito diseñado en 02 para acondicionar la señal de los sensores. Si bien en esa etapa se
+    procuró no utilizar componentes de difícil adquisición el plazo estimado está sujeto a su disponibilidad o la de
+    reemplazos de características similares.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe preliminar de avances.
+
+    - Semana 3:
+
+        Circuito construido y testeado.
+        Documentación de montaje y diseño del pcb.
+
+
+
+### Tarea: 13 - Implementación unidad de potencia.
+
+- Prerequisitos: 10.
+
+- Tiempo estimado: 3 semanas.
+
+- Descripción:
+
+    Se procederá a construir circuito diseñado en 10. Si bien en esa etapa se procuró no utilizar componentes de difícil
+    adquisición el plazo estimado está sujeto a su disponibilidad o la de reemplazos de características similares.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Informe preliminar de avances.
+
+    - Semana 3:
+
+        Circuito construido y testeado.
+        Documentación de montaje y diseño del pcb.
+
+
+
+### Tarea: 14 - Diseño interfaz de usuario.
+
+- Prerequisitos: 11 (débil).
+
+- Tiempo estimado: 2 semanas.
+
+- Descripción:
+
+    Se procederá a diseñar junto con el Cliente cómo será la interfaz para operar la unidad. A DEFINIR: esta puede ser
+    implementada sobre el mismo microcontrolador utilizado en 11 o ser un bloque independiente.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 1:
+
+        Reunión con el Cliente para discutir requerimientos y posibles propuestas de interfaz.
+
+    - Semana 2:
+
+        Documentación completa sobre cómo debe operarse la unidad, necesidades específicas.
+        Detalle de cada posible acción del Usuario y resultados esperados.
+
+
+
+### Tarea: 15 - Implementación interfaz de usuario.
+
+- Prerequisitos: 14.
+
+- Tiempo estimado: 4 semanas.
+
+- Descripción:
+
+    En base a los requerimientos relevados en 14 se procederá a su implementación. Para llevar a cabo esta tarea puede
+    ser preciso la compra de materiales, si bien se procurará que sean de fácil adquisición los plazos estimados están
+    sujetos a su disponibilidad.
+
+    El tiempo estimado a su vez también depende de los requerimientos planteados en 14.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Interfaz de usario funcional, cualquier funcionalidad requerida no implementada (por ejemplo, datos reales de
+        medidas) estará reemplazada por datos ficticios con el fin de permitir su evaluación.
+        Reunión con el Cliente para prueba de la misma y devolución de modificaciones a realizar.
+
+    - Semana 3:
+
+        Reunión con el Cliente para evaluación de las modificaciones pedidas.
+
+    - Semana 4:
+
+        Reunión con el Cliente para evaluación de las modificaciones pedidas, aceptación de la unidad.
+
+
+
+### Tarea: 16 - Integración final.
+
+- Prerequisitos: Todas las tareas anteriores.
+
+- Tiempo estimado: 2 semanas.
+
+- Descripción:
+
+    Se procederá a la integración de todas las estapas anteriores, realizando los ajustes pertinentes.
+    Esto comprende la compra o construcción de un gabinete, el armado de cables y demás cosas necesarias a fin de
+    armar la unidad final.
+
+- Entregables / Hitos / Etapas:
+
+    - Semana 2:
+
+        Unidad completamente armada, autónoma y funcional.
+        Reunión con el Cliente.
+
+## Resumen:
+
+Tiempo total estimado (secuencial): 46 Semanas máximo.

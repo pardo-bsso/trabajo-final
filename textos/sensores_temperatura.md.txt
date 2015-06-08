@@ -1,0 +1,150 @@
+FIXME: sensores semiconductores, PTAT, etc.
+
+# Sensores de temperatura:
+
+Esta es una breve descripción de los métodos contemporáneos utilizados en el sensado de temperatura, no necesariamente
+ordenados según popularidad.
+
+## Termocuplas:
+
+Las termocuplas son sensores relativamente baratos basados en el efecto Seebeck, descubierto en 1821.
+Al someter un material homogéneo a un gradiente de temperatura se observa en el una fuerza electromotriz proporcional a
+este gradiente.
+
+Para poder obsevar de forma práctica este efecto se recurre a la unión de dos (o mas) metales distintos, midiéndose
+entonces la diferencia total de los potenciales termoeléctricos (la lectura es proporcional a una diferencia de
+temperatura).
+
+Las termocuplas se encuentran estandarizadas de acuerdo a los materiales que las componen y organismos tales como el
+NIST publican tablas para interpolar así como también los coeficientes para ajustar con un polinomio.
+
+### Ventajas:
+
+* Costo: las termocuplas son uno de los sensores mas baratos de fabricar.
+
+* Robustez.
+
+* Velocidad de respuesta: debido a su pequeño tamaño las termocuplas sin vaina de protección pueden responder
+  prácticamente en forma instantánea a cambios de temperatura.
+
+* Amplio rango de medida: el rango útil comprende aproximadamente de -200°C a 1700°C para los distintos tipos de
+  termocuplas estándar.
+
+### Desventajas:
+
+* Nivel de salida reducido: para la mayoría de las termocuplas en el rango de temperatura la salida no supera los 100mV,
+  lo cual conlleva exigencias particulares tanto en la electrónica de medida así como también en el montaje para evitar
+  la formación de uniones termoeléctricas no deseadas (La unión en serie de termocuplas, termopila, es una solución a
+  este problema).
+
+* Necesidad de compensación: para poder medir temperatura se utilizan dos uniones termoeléctricas. La unión "caliente"
+  en el punto de medida y una unión "fría" de referencia, de la que debe conocerse con exactitud su temperatura (por
+  ejemplo, utilizando un baño de hielo).
+
+* No linealidad: la tensión de salida es proporcional a la temperatura solo en rangos estrechos, por lo que se debe
+  recurrir a un polinomio de alto orden para obtener una lectura correcta.
+
+* Moderada exactitud: no suele ser mejor que 0.5°C en casos especiales.
+
+
+## Termistores:
+
+Los termistores son sensores fabricados en base a óxidos y cerámicas cuya resistencia varía en función de la temperatura.
+Los efectos fundamentales fueron documentados por primera vez en 1833 por Michael Faraday.
+
+De acuerdo a cómo varía la resistencia en función de la temperatura se clasifican en PTC (aumenta con temperatura) o NTC
+(disminuye al incrementarse la temperatura).
+
+Su principal característica es la alta sensibilidad y no linealidad que presentan.
+
+En rangos de temperatura reducida su respuesta puede aproximarse en forma lineal, aunque generalmente se emplea el
+modelo desarollado por Steinhart y Hart:
+
+$$\frac{1}{T} = A + B ln(R) + C (ln(R))^3 $$
+
+### Ventajas:
+
+* Costo: los termistores genéricos suelen ser relativamente baratos.
+
+* Tamaño: pueden fabricarse en tamaños extremadamente reducidos, lo que les brinda una alta velocidad de respuesta.
+
+* Alta exactitud: con una adecuada calibración es rutinario resolver milésimas de grado.
+
+* Menos requerimientos en el sistema de medida: debido a su alta resistencia y sensibilidad no suele ser necesario en la
+  mayoría de los casos utilizar técnicas de medida tales como conexiones Kelvin.
+
+### Desventajas:
+
+* Fragilidad: debido a su construcción la exposición a temperaturas elevadas, incluso por debajo del límite recomendado,
+  resultan en variaciones permanentes de su respuesta. También suelen ser mas delicados en cuanto a su manejo.
+
+* Autocalentamiento: para medir su resistencia se hace circular una corriente que a su vez incrementa la temperatura del
+  sensor. La baja masa térmica debido a su reducido tamaño tampoco contribuye en forma positiva.
+
+* Falta de estandarización: a diferencia de las termocuplas los termistores no están estandarizados y cada fabricante
+  provee el conjunto de constantes para cada modelo.
+
+
+## Termoresistores:
+
+La resistividad de los metales y aleaciones varía en forma marcada con la temperatura. Si bien este efecto es conocido
+desde 1821 recién en 1871 Siemens describe el uso de una resistencia de platino para medir la temperatura.
+
+En principio puede utilizarse cualquier metal pero el mas difundido es el platino por su estabilidad incluso a altas
+temperaturas, respuesta predecible y poca susceptibilidad de ser contaminado.
+
+Físicamente se construyen tanto como resistencias de alambre bobinado o por deposición en sustrato aislante.
+
+Las resistencias de alambre de platino son uno de los estándares utilizados laboratorio aunque sumamente frágiles, no
+solo por riesgo de rotura sino también porque los esfuerzos mecánicos afectan la respuesta del elemento.
+
+
+## Ópticos / por radiación:
+
+Son métodos que no requieren el contacto directo con el objeto de interés. Se caracterizan por su alta velocidad de
+respuesta y límites altos de temperatura máxima.
+
+### Infrarrojos:
+
+Todos los cuerpos emiten energía de acuerdo a su temperatura en forma proporcional a $T^4$ . Este fenómeno se aprovecha
+para determinar la temperatura a distancia. La exactitud es moderada ( ~ 2°C ) y la medida depende de la emisividad del
+objeto, aunque esto puede solventarse utilizando recubrimientos específicos.
+
+### Basados en fluorescencia:
+
+Estos sensores se aprovechan de que ciertos fósforos emiten luz al ser estimulados y el tiempo de decaimiento de esta
+emisión depede de la temperatura a la que se encuentra. Poseen una exactitud moderada ( ~ 2°C )
+
+
+### Basados en interferencia:
+
+*XXX FIXME*.
+
+## Acústicos:
+
+La velocidad de propagación del sonido en aire y otros gases es proporcional a la raíz cuadrada de la temperatura
+absoluta, midiendo el tiempo que tarda en viajar un pulso a través de un tubo de dimensiones conocidas puede
+determinarse la temperatura del mismo.
+
+## Basados en resonacia mecánica:
+
+Estos sensores se basan en la dependencia de la frecuencia de cristales de cuarzo con la temperatura. Pueden obtenerse
+altas exactitudes aunque la velocidad de respuesta no es muy elevada.
+
+## Bibliografía:
+
+* Handbook of modern sensors: Physics, Designs and Applications (3rd edition). Jacob Fraden.
+
+* Practical Guidelines for Temperature Measurement. Omega Corp. http://www.omega.com
+
+* Guide on Secondary Thermometry. Bureau International des Poids et Mesures.
+
+* Thermocouple Measurement. Jim Williams. Linear Tech AN28F.
+
+* An Introduction to Acoustic Thermometry. Jim Williams, Omar Sanchez-Felipe. Linear Tech AN131F.
+
+* Acoustic gas thermometry. M.R. Moldover, R.M. Gavioso.Bureau International des Poids et Mesures Metrologia, 51 R1
+  (2014). http://iopscience.iop.org/0026-1394/51/1/R1/article
+
+* The Linear Quartz Thermometer: a New Tool for Measuring Absolute and Difference Temperatures. Hewlett Packard Journal,
+  Vol. 16 No. 7. http://www.hparchive.com/Journals/HPJ-1965-03.pdf

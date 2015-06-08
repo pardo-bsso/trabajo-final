@@ -1,0 +1,51 @@
+# Consultas sobre sensores, técnicas utilizadas en otras instituciones:
+
+##  A&G Metrología -  http://www.aygmetrologia.com.ar
+
+Después del 19 de Abril, recomendaron llamar al SAC (INTI) 011 4724-6200.
+
+## Evan Foss (Eaton Peabody Lab):
+
+> Thermal mass can really help in these situations.
+
+
+## DJ Delorie (Red Hat Inc):
+
+> I use a thermocouple to monitor my woodstove, but I don't care so much
+> about precision.  I use a DS2760 thermocouple kit from Parallax for
+> it, and a high-temp thermocouple probe from Omega.com.
+>
+> For monitoring my geothermal system, I used RTDs and an MCU's ADC to
+> measure them.  I got extra precision by doing each measurement 64
+> times and averaging, and the tech who calibrated my geothermal system
+> says they're spot-on.
+
+
+## Bob Paddock (Grace Industries):
+
+> Take a look at the LTC2983 good to 0.1'C:
+>
+> http://www.linear.com/docs/46027
+
+
+## John Griessen (Ecosensory):
+
+> 0.3 deg C is close to the tolerances of thermocouples you can buy,
+> and the temperature dependencies of the control circuit are
+> in that range also.
+
+
+## John Doty ([Noqsi Aerospace, ltd](http://www.noqsi.com/)):
+
+> For focal plane temperature control at -90±0.1C on the Suzaku x-ray observatory, I used a Pt100 RTD with a commercial
+> 20 bit delta-sigma ADC. In an FPGA, a PID controller drove a delta-sigma serial DAC (all digital). The FPGA output
+> controlled an adjustable power converter which powered a thermoelectric heat pump. I didn’t really need 20 bits here,
+> but it didn’t have a significant cost in hardware, and not having to worry about digital errors made the analysis
+> simple. That was years ago: several manufacturers now make 24 bit delta-sigma ADCs I would consider suitable for
+> temperature control.
+
+
+> Some delta-sigma ADCs have differential inputs for both reference and measurement. This allows you to make a direct
+> ratiometric comparison between a reference resistor and an RTD. Wire them in series, make the voltage across the
+> reference resistor the reference voltage, and the voltage across the RTD the measurement. This reduces the analog
+> accuracy problem to a very small number of components.

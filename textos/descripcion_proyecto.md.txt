@@ -1,0 +1,30 @@
+# Proyecto: *"Diseño y construcción de control de temperatura programable y horno para medidas de espectroscopía de impedancia"*
+
+## Descripción:
+
+El objetivo de este trabajo consiste en controlar la temperatura de una muestra hasta 450 °C con una exactitud de 0.5 °C
+y precisión de 0.3 °C en períodos de tiempo extendidos para ser aplicado, en principio, en mediciones de espectroscopía
+de impedancia.
+
+Mas allá de los problemas propios del control de sistemas con retardo este proyecto debe considerar la alta sensibilidad
+que posee el analizador de impedancias frente a interferencias electromagnéticas, por lo que deberán tomarse recaudos a
+fin de que no se genere ni transmita interferencia en grado tal que afecte negativamente la medida realizada.
+
+Como resultado de este trabajo se contará con una unidad que permitirá controlar la temperatura del horno dentro de los
+parámetros establecidos, pudiéndose programar rampas y escalones de temperatura, todo esto sin interferir con el
+analizador de impedancia.
+
+Entre otras cosas el presente trabajo comprende:
+
+- Estudio de técnicas de medición de temperatura.
+- Estudio de técnicas de control.
+- Estudio del analizador de impedancia y factores que afectan su funcionamiento.
+- Estudio de un horno existente.
+- Diseño y construcción de un horno (de ser necesario).
+- Diseño y construcción de una interfaz para acondicionar la señal de los sensores de temperatura.
+- Diseño y construcción de una unidad de control flexible.
+- Diseño y construcción de una etapa de potencia para comandar al elemento calefactor.
+- Diseño y construcción de una interfaz de usuario.
+
+
+![Diagrama General](diagrama_general.svg)

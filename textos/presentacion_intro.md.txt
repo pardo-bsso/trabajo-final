@@ -1,0 +1,117 @@
+% Control de temperatura programable y horno
+% Adrián Pardini
+
+---
+
+# Temario
+- Contexto y objetivos
+- Problemáticas
+- Técnicas estándar
+- Herramientas disponibles
+- Plan (tentativo) de trabajo
+
+---
+
+## Contexto
+
+La espectroscopía de impedancia es una técnica moderna (~1970) para la caracterización de materiales y sistemas
+electroquímicos.
+
+La técnica consiste en aplicar al material un potencial eléctrico senoidal de frecuencia variable y registrar la
+respuesta de corriente. La impedancia es definida como el cociente entre el potencial y la corriente.
+
+**La introducción de la temperatura como variable es un aporte fundamental a los estudios de materiales.**
+
+---
+
+## Objetivos
+
+* Estabilizar la temperatura de la muestra con exactitud de 0.5°C y precisión de 0.3°C hasta 450°C.
+
+* Poder programar rampas y tiempos.
+
+* No interferir en el proceso de medida.
+
+---
+
+## Problemáticas
+
+> - El proceso de medición es extremadamente sensible a interferencias externas.
+> - Tiempo de respuesta de los sensores.
+
+---
+
+## Medida de temperatura
+
+> - Se transfiere parte de la energía térmica del objeto al sensor.
+> - El hecho de medir perturba la temperatura del objeto.
+> - Efectos indeseados: Capacidad y resistencia térmica.
+
+---
+
+## Sensores más comunes
+
+> - Termocuplas
+> - Termistores
+> - Termoresistores
+> - Semiconductores
+> - Infrarrojos / bolométricos
+
+---
+
+## Sensores no tan comunes
+
+> - Fluorópticos
+> - Acústicos
+> - Resonadores
+
+---
+
+## Horno
+
+- Se cuenta con uno, hay que caracterizarlo.
+- Necesidad de aislación térmica con el ambiente.
+- Necesidad de blindaje electromagnético.
+- Capacidad térmica: insensibiliza ante perturbaciones
+
+> - Pero disminuye la velocidad de respuesta.
+
+---
+
+## Plan tentativo de trabajo
+
+Primera etapa:
+
+- Estudio de sensores y técnicas contemporáneas en laboratorios
+- Estudio del horno actual
+- Determinación de tecnología a utilizar
+
+---
+
+## Consultas con otras instituciones:
+
+### John Doty ([Noqsi Aerospace, ltd](http://www.noqsi.com/)):
+
+> For focal plane temperature control at -90±0.1C on the Suzaku x-ray observatory, I used a Pt100 RTD with a commercial
+> 20 bit delta-sigma ADC. In an FPGA, a PID controller drove a delta-sigma serial DAC.
+> That was years ago: several manufacturers now make 24 bit delta-sigma ADCs I would consider suitable for
+> temperature control.
+
+---
+
+### Bob Paddock (Grace Industries):
+
+> Take a look at the LTC2983 good to 0.1'C:
+>
+> [http://www.linear.com/docs/46027](http://www.linear.com/docs/46027)
+
+---
+
+### John Griessen (Ecosensory):
+
+> 0.3 deg C is close to the tolerances of thermocouples you can buy,
+> and the temperature dependencies of the control circuit are
+> in that range also.
+
+---
+

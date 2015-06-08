@@ -1,0 +1,45 @@
+====== Indice de Secciones ======
+
+Borradores sobre distintos temas
+
+[[consultas_con_otras_instituciones.md|Consultas con otras instituciones]]
+
+[[medicion_temperatura.md|Sobre medición de temperatura]]
+
+[[sensores_temperatura.md|Sensores de temperatura]]
+
+[[intro_espectroscopia.md|Sobre espectroscopía de impedancia]]
+
+
+====== Reportes de progreso ======
+
+Luego serán traducidos (si corresponde) y organizados en capítulos
+
+http://tangopardo.com.ar/2cf7/category/tf
+
+
+====== Libros y otros textos ======
+
+Libros, papers y otra documentación utilizada, aún sin organizar.
+
+http://tangopardo.com.ar/tf/libros/
+
+
+====== Flujo documentación ======
+
+Para hacer html:
+
+    pandoc --html5 --mathjax archivo_md.txt.md -o archivo_salida.html
+
+Para hacer pdf o latex:
+
+    pandoc --latex-engine=xelatex archivo_md.txt.md -o archivo_salida.pdf
+    pandoc --latex-engine=xelatex archivo_md.txt.md -o archivo_salida.tex
+
+Slides:
+
+    pandoc --template=default.revealjs  --mathjax -t revealjs -o salida_presentacion.html
+
+====== Pendientes varios ======
+
+- Automatizar sincronización repo local <-> web
