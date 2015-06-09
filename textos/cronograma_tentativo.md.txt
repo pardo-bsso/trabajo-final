@@ -103,7 +103,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
     - Semana 1:
 
-        Informe sobre métodos constructivos de hornos, considerando la disponibilidad demateriales
+        Informe sobre métodos constructivos de hornos, considerando la disponibilidad de materiales
         en el mercado local.
 
     - Semana 3:
@@ -185,7 +185,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    Se estudiarán técnicas para controlar sistemas, prestando atención al efecto introducido por
+    Se estudiarán técnicas empleadas para controlar sistemas, prestando atención al efecto introducido por
     el retardo inherente en el sistema térmico.
 
 - Entregables / Hitos / Etapas:
@@ -264,7 +264,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 - Descripción:
 
-    En base a la estrategia de control desarrollada en 09 se procederá a su programación en un microcontrolador
+    En base a la estrategia de control desarrollada en 09 se procederá a su programación en un micro-controlador
     estándar. Esta tarea también supone incorporar etapas para acondicionar las señales entregadas por la interfaz
     de medida diseñada en 02 así como también las requeridas por la etapa de potencia diseñada en 10.
 
@@ -294,7 +294,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 - Descripción:
 
     Se procederá a construir circuito diseñado en 02 para acondicionar la señal de los sensores. Si bien en esa etapa se
-    procuró utilizar componentes de fácil adquisición el plazo estimado está sujeto a su disponibilidad o la obtención de
+    procuró utilizar componentes de fácil adquisición, el plazo estimado está sujeto a su disponibilidad o la obtención de
     reemplazos de características similares.
 
 - Entregables / Hitos / Etapas:
@@ -319,7 +319,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 - Descripción:
 
     Se procederá a construir circuito diseñado en 10. Si bien en esa etapa se procuró utilizar componentes de fácil
-    adquisición el plazo estimado está sujeto a su disponibilidad o la obtención de reemplazos de características similares.
+    adquisición, el plazo estimado está sujeto a su disponibilidad o la obtención de reemplazos de características similares.
 
 - Entregables / Hitos / Etapas:
 
@@ -343,7 +343,7 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 - Descripción:
 
     Se procederá a diseñar junto con el Cliente cómo será la interfaz para operar la unidad. A DEFINIR: esta puede ser
-    implementada sobre el mismo microcontrolador utilizado en 11 o ser un bloque independiente.
+    implementada sobre el mismo micro-controlador utilizado en 11 o ser un bloque independiente.
 
 - Entregables / Hitos / Etapas:
 
