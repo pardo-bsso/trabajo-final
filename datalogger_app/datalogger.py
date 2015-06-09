@@ -77,7 +77,7 @@ class CommThread(BaseCommThread):
         while True:
             try:
                 line  = self._serial.readline()
-                data = [float(x) for x in line.split()]
+                data = [float(x) for x in line.split(' ')]
                 t = self.t
                 self.t += self.dt
                 self.new_data.emit(t, data)
