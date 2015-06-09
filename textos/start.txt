@@ -2,6 +2,10 @@
 
 Borradores sobre distintos temas
 
+[[descripcion_proyecto.md|Descripción del Proyecto]]
+
+[[cronograma_tentativo.md|Cronograma tentativo]]
+
 [[consultas_con_otras_instituciones.md|Consultas con otras instituciones]]
 
 [[medicion_temperatura.md|Sobre medición de temperatura]]
