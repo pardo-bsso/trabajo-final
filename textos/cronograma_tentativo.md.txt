@@ -411,4 +411,4 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 
 ## Resumen:
 
-Tiempo total estimado (secuencial): 46 Semanas máximo.
+Tiempo total estimado (secuencial): 44 Semanas máximo.
