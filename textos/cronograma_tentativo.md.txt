@@ -412,3 +412,33 @@ Detalle de las etapas del Proyecto junto con sus requerimientos y tiempo estimad
 ## Resumen:
 
 Tiempo total estimado (secuencial): 44 Semanas máximo.
+
+
+
+## Detalle de informes parciales:
+
+Según el cronograma anteriormente establecido se realizarán tres informes durante el desarrollo del proyecto detallando
+el progreso del mismo hasta el momento.
+
+### Primer informe:
+
+Se realizará en la semana 17, comprende las tareas 1 a 6 del cronograma.
+
+### Segundo informe:
+
+Se realizará en la semana 31, comprende las tareas 7 a 11 del cronograma.
+
+### Tercer informe:
+
+Se realizará en la semana 44, comprende las tareas 12 a 16 del cronograma.
+Este es el informe final.
+
+
+## Financiamiento del proyecto:
+
+Los fondos necesarios para llevar a cabo el  presente proyecto estarán contemplados en los proyectos acreditados por el
+CONICET (PIP 2014-2016 GI código 11220130100651CO) y la UNLP (código 11/X709).
+
+## Lugar de trabajo:
+
+Las tareas del proyecto se realizarán en las instalaciones del Instituto de Física La Plata.
