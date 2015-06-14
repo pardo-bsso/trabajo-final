@@ -28,4 +28,4 @@ Entre otras cosas el presente trabajo comprende:
 - Diseño y construcción de una interfaz de usuario.
 
 
-![Diagrama General](diagrama_general.svg)
+![Diagrama General](img/diagrama_general.svg)
