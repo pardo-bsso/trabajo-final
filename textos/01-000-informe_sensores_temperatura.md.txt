@@ -1,22 +1,27 @@
-FIXME: sensores semiconductores, PTAT, etc.
-
 # Sensores de temperatura:
 
-Esta es una breve descripción de los métodos contemporáneos utilizados en el sensado de temperatura, no necesariamente
-ordenados según popularidad.
+Esta es una breve descripción de los métodos contemporáneos utilizados en el sensado de temperatura, tanto los más
+comunes así como también otros especializados.
 
 ## Termocuplas:
 
-Las termocuplas son sensores relativamente baratos basados en el efecto Seebeck, descubierto en 1821.
-Al someter un material homogéneo a un gradiente de temperatura se observa en el una fuerza electromotriz proporcional a
-este gradiente.
+Las termocuplas son sensores relativamente baratos basados en el efecto Seebeck, descubierto en 1821.  Al someter un
+material homogéneo a un gradiente de temperatura se desarrolla en el mismo una fuerza electromotriz proporcional a este
+gradiente.
 
-Para poder obsevar de forma práctica este efecto se recurre a la unión de dos (o mas) metales distintos, midiéndose
+Para poder observar de forma práctica este efecto se recurre a la unión de dos (o mas) metales distintos, midiéndose
 entonces la diferencia total de los potenciales termoeléctricos (la lectura es proporcional a una diferencia de
 temperatura).
 
 Las termocuplas se encuentran estandarizadas de acuerdo a los materiales que las componen y organismos tales como el
-NIST publican tablas para interpolar así como también los coeficientes para ajustar con un polinomio.
+NIST[^nist] publican tablas para obtener la temperatura en función de la tensión medida así como también los coeficientes
+para ajustar con un polinomio y poder calcularla.
+
+Físicamente se encuentran tanto desnudas (la unión está expuesta al ambiente de medida) así como también recubiertas con
+una vaina metálica para protegerlas. A su vez estas pueden o no estar eléctricamente aisladas de la vaina. Cabe destacar
+que esta protección hace mas lenta la respuesta de la termocupla frente a cambios de temperatura.
+
+[^nist]: National Institute of Standards and Technology
 
 ### Ventajas:
 
@@ -44,7 +49,18 @@ NIST publican tablas para interpolar así como también los coeficientes para aj
 * No linealidad: la tensión de salida es proporcional a la temperatura solo en rangos estrechos, por lo que se debe
   recurrir a un polinomio de alto orden para obtener una lectura correcta.
 
-* Moderada exactitud: no suele ser mejor que 0.5°C en casos especiales.
+* Moderada exactitud: no suele ser mejor que 0.5°C en casos especiales y se requiere de un esfuerzo adicional de
+  calibración.
+
+* Precisa conexiones especiales: en todo el tramo desde la termocupla hasta la unidad de medida debe evitarse la unión
+  de metales distintos, dado que estos forman a su vez una nueva termocupla y afectan la medida, por lo cual se emplean
+  cables especiales según la clase de termocupla.
+
+* Susceptible a interferencia electromagnética.
+
+* La estabilidad a largo plazo no es muy buena en comparación a otros transductores.
+
+* Dificultad de calibración.
 
 
 ## Termistores:
@@ -58,7 +74,7 @@ De acuerdo a cómo varía la resistencia en función de la temperatura se clasif
 Su principal característica es la alta sensibilidad y no linealidad que presentan.
 
 En rangos de temperatura reducida su respuesta puede aproximarse en forma lineal, aunque generalmente se emplea el
-modelo desarollado por Steinhart y Hart:
+modelo desarrollado por Steinhart y Hart:
 
 $$\frac{1}{T} = A + B ln(R) + C (ln(R))^3 $$
 
@@ -71,18 +87,20 @@ $$\frac{1}{T} = A + B ln(R) + C (ln(R))^3 $$
 * Alta exactitud: con una adecuada calibración es rutinario resolver milésimas de grado.
 
 * Menos requerimientos en el sistema de medida: debido a su alta resistencia y sensibilidad no suele ser necesario en la
-  mayoría de los casos utilizar técnicas de medida tales como conexiones Kelvin.
+  mayoría de los casos utilizar técnicas de medida especiales tales como conexiones Kelvin (sistema a 4 conductores).
 
 ### Desventajas:
 
 * Fragilidad: debido a su construcción la exposición a temperaturas elevadas, incluso por debajo del límite recomendado,
-  resultan en variaciones permanentes de su respuesta. También suelen ser mas delicados en cuanto a su manejo.
+  resultan en variaciones permanentes de su respuesta característica. También suelen ser mas delicados en cuanto a su
+  manejo.
 
-* Autocalentamiento: para medir su resistencia se hace circular una corriente que a su vez incrementa la temperatura del
-  sensor. La baja masa térmica debido a su reducido tamaño tampoco contribuye en forma positiva.
+* Auto calentamiento: para medir su resistencia se hace circular una corriente por el sensor que a su vez incrementa su
+  temperatura. La baja masa térmica debido a su reducido tamaño tampoco contribuye en forma positiva para amenorar este
+  efecto
 
 * Falta de estandarización: a diferencia de las termocuplas los termistores no están estandarizados y cada fabricante
-  provee el conjunto de constantes para cada modelo.
+  provee el conjunto de constantes para ajustar la respuesta de cada modelo.
 
 
 ## Termoresistores:
@@ -93,10 +111,39 @@ desde 1821 recién en 1871 Siemens describe el uso de una resistencia de platino
 En principio puede utilizarse cualquier metal pero el mas difundido es el platino por su estabilidad incluso a altas
 temperaturas, respuesta predecible y poca susceptibilidad de ser contaminado.
 
-Físicamente se construyen tanto como resistencias de alambre bobinado o por deposición en sustrato aislante.
+Físicamente se construyen tanto como resistencias de alambre bobinado o por deposición en un sustrato aislante.
 
-Las resistencias de alambre de platino son uno de los estándares utilizados laboratorio aunque sumamente frágiles, no
-solo por riesgo de rotura sino también porque los esfuerzos mecánicos afectan la respuesta del elemento.
+Las resistencias de alambre de platino son uno de los estándares más utilizados en laboratorios aunque sumamente
+frágiles, no solo por riesgo de rotura sino también porque los esfuerzos mecánicos afectan la respuesta característica
+del elemento.
+
+### Ventajas:
+
+* Salida estable.
+
+* Alta grado de linealidad y repetitividad.
+
+* Relativamente fáciles de calibrar.
+
+* Alta exactitud.
+
+* No precisa de cables especiales.
+
+### Desventajas:
+
+* Costo: suele ser alto en comparación a las termocuplas y termistores.
+
+* Rango reducido: normalmente son utilizados entre -200°C a 500°C
+
+* Fragilidad: en general, no toleran shocks mecánicos, temperaturas excesivas por sobre su rango nominal ni ser
+  expuestos a llama directa o atmósferas corrosivas.
+
+## Semiconductores:
+
+Estos sensores se basan en la dependencia de las características de uniones semiconductoras con la temperatura.
+
+Entre sus principales ventajas se destacan la alta linealidad, facilidad de construcción, posibilidad de incorporarse en
+dispositivos integrados y bajo costo. No obstante esto su rango útil es limitado, normalmente a menos de 150°C.
 
 
 ## Ópticos / por radiación:
@@ -113,12 +160,17 @@ objeto, aunque esto puede solventarse utilizando recubrimientos específicos.
 ### Basados en fluorescencia:
 
 Estos sensores se aprovechan de que ciertos fósforos emiten luz al ser estimulados y el tiempo de decaimiento de esta
-emisión depede de la temperatura a la que se encuentra. Poseen una exactitud moderada ( ~ 2°C )
+emisión depende de la temperatura a la que se encuentra. Poseen una exactitud moderada ( ~ 2°C )
 
 
-### Basados en interferencia:
+### Basados en espectro de absorción / reflexión:
 
-*XXX FIXME*.
+Consisten en un cristal de arseniuro de Galio en el extremo de una fibra óptica. La longitud de onda a partir de la cual
+este se vuelve transparente varía con la temperatura, por lo que midiendo el espectro de reflexión puede calcularse la
+temperatura del mismo.
+
+Su principales ventajas son la inmunidad a interferencias electromagnéticas y posibilidad de grandes distancias respecto
+del punto de medida. Asimismo, son sensores especializados y de un costo apreciable.
 
 ## Acústicos:
 
@@ -126,7 +178,7 @@ La velocidad de propagación del sonido en aire y otros gases es proporcional a 
 absoluta, midiendo el tiempo que tarda en viajar un pulso a través de un tubo de dimensiones conocidas puede
 determinarse la temperatura del mismo.
 
-## Basados en resonacia mecánica:
+## Basados en resonancia mecánica:
 
 Estos sensores se basan en la dependencia de la frecuencia de cristales de cuarzo con la temperatura. Pueden obtenerse
 altas exactitudes aunque la velocidad de respuesta no es muy elevada.
@@ -141,6 +193,14 @@ altas exactitudes aunque la velocidad de respuesta no es muy elevada.
 
 * Thermocouple Measurement. Jim Williams. Linear Tech AN28F.
 
+* "A New Fiber Optical Thermometer and its application for Process Control in Strong Electric, Magnetic and
+  Electromagnetic Fields". U.Roland C.P. Renschen and others. - University of Leipzig, Faculty of Physics and Earth
+  Sciences (2003).
+
+* Anritsu Meter, http://www.anritsu-meter.com/
+
+* Optocon A.G, catálogo de productos. http://www.optocon.de/en/
+
 * An Introduction to Acoustic Thermometry. Jim Williams, Omar Sanchez-Felipe. Linear Tech AN131F.
 
 * Acoustic gas thermometry. M.R. Moldover, R.M. Gavioso.Bureau International des Poids et Mesures Metrologia, 51 R1
@@ -148,3 +208,4 @@ altas exactitudes aunque la velocidad de respuesta no es muy elevada.
 
 * The Linear Quartz Thermometer: a New Tool for Measuring Absolute and Difference Temperatures. Hewlett Packard Journal,
   Vol. 16 No. 7. http://www.hparchive.com/Journals/HPJ-1965-03.pdf
+
