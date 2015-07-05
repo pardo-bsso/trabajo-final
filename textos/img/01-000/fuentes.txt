@@ -1,0 +1,13 @@
+http://www.omega.com
+
+    - F1500_F2000_F4000_l.jpg
+    - P-ULTRA_RTD_l.jpg
+    - T5R_T3R_l.jpg
+    - RTD_1PT100G.gif
+    - RTD_PR10.gif
+    - RTD_TFD.gif
+
+Montaje propio basado en las anteriores:
+
+    - rtds.png
+    - rtds.svg
