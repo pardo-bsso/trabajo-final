@@ -265,6 +265,8 @@ Por lo anteriormente expuesto, recomiendo emplear un sensor del tipo PT1000.
 
 * Optocon A.G, catálogo de productos. http://www.optocon.de/en/
 
+* Farnell - Platinum -Temperature Sensors. http://www.farnell.com/datasheets/30616.pdf
+
 * An Introduction to Acoustic Thermometry. Jim Williams, Omar Sanchez-Felipe. Linear Tech AN131F.
 
 * Acoustic gas thermometry. M.R. Moldover, R.M. Gavioso.Bureau International des Poids et Mesures Metrologia, 51 R1
