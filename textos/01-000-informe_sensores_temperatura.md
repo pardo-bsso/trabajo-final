@@ -1,0 +1,1 @@
+01-000-informe_sensores_temperatura.md.txt
